@@ -1,4 +1,14 @@
+using Microsoft.EntityFrameworkCore;
+using LunaVerde.Data;
+
 var builder = WebApplication.CreateBuilder(args);
+
+
+builder.Services.AddDbContext<LunaVerdeDBContext>(options =>
+    options.UseSqlServer("Server=DESKTOP-VKIG8QK\\SQLEXPRESS; Database=Luna Verde; Trusted_Connection=True;" +
+    "TrustServerCertificate=True"));
+
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
