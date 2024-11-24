@@ -1,4 +1,10 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿// Обработчик клика на иконку бургер
+// Получаем элементы
+const burgerIcon = document.getElementById('burger-icon');
+const mobileMenu = document.getElementById('mobile-menu');
 
-// Write your JavaScript code.
+// При клике на бургер-иконку открываем/закрываем мобильное меню
+burgerIcon.addEventListener('click', () => {
+    mobileMenu.classList.toggle('open');
+});
+
