@@ -1,0 +1,141 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Serif Text", serif;
+}
+
+img{
+    width: 500px;
+    height: auto;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    padding: 1em !important;
+}
+
+.title h1{
+    font-size: 80px;
+}
+
+.row .col{
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-justify{
+    font-size: 18px;
+}
+
+.d-flex svg {
+    width: 40px;
+    height: auto;
+    filter: invert(0); /* Делает SVG черным по умолчанию */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.row aligh-items-center{
+    justify-content: center;
+}
+
+.d-flex {
+    background-color: #A1B6BF;
+    padding: 30px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.d-flex:hover {
+    transform: scale(1.1); /* Увеличение размера */
+    background-color: #6C8A94; /* Темный оттенок при наведении (опционально) */
+}
+    .d-flex h5,
+    .d-flex p {
+        color: black; /* Начальный цвет текста */
+        transition: color 0.3s ease; /* Плавный переход цвета */
+    }
+
+    .d-flex:hover h5,
+    .d-flex:hover p {
+        color: white; /* Цвет текста при наведении */
+    }
+
+.fw-bold{
+    color: black;
+    font-size: 22px;
+}
+
+.text {
+    color: black;
+    font-size: 18px; /* Размер текста */
+}
+
+
+
+/*адаптивность*/
+@media (max-width: 1040px){
+    img{
+        width: 400px;
+        height: auto;
+    }
+}
+@media (max-width: 950px) {
+    .col-md-6 p {
+        padding-left: 30px;
+    }
+    .col svg {
+        width: 55px;
+        height: auto;
+    }
+    img{
+        width: 350px;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .title h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 60px;
+        transition: font-size 0.3s;
+    }
+    .col-md-6 p{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .col svg {
+        width: 45px;
+        height: auto;
+    }
+    img{
+        width: 350px;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        display: flex;
+        justify-content: center;
+        font-size: 40px;
+        transition: font-size 0.3s;
+    }
+    .col svg {
+        width: 40px;
+        height: auto;
+    }
+}
+
+@media (max-width: 375px){
+    img{
+        width: 250px;
+        height: auto;
+    }
+    .col svg {
+        width: 35px;
+        height: auto;
+    }
+}
+

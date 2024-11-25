@@ -1,145 +1,27 @@
-.qwigley-regular {
-    font-family: "Qwigley", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 30px;
-    background-color: #534E4E;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Легкая тень для хедера */
-    height: 70px;
-}
-
-/* Логотип */
-.logo {
-    display: flex;
-    align-items: center;
-    width: 40px; /* Размер логотипа */
-    height: auto;
-    margin-right: 10px;
-    transition: width 0.3s, height 0.3s;
-}
-.logo:hover{
-    width: 60px;
-    height: auto;
-    transition: width 0.3s, height 0.3s;
-}
-
-/* Стили для навигационного меню */
-nav ul {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
+п»ї/* РЈР±РµРґРёРјСЃСЏ, С‡С‚Рѕ html Рё body Р·Р°РЅРёРјР°СЋС‚ РІСЃСЋ РІС‹СЃРѕС‚Сѓ */
+html, body {
+    height: 100%;
     margin: 0;
-    justify-content: flex-end;
-}
-nav ul li {
-    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
-nav ul li:last-child {
-    margin-right: 0;
+/* РћСЃРЅРѕРІРЅРѕР№ РєРѕРЅС‚РµРЅС‚ СЃС‚СЂР°РЅРёС†С‹ РґРѕР»Р¶РµРЅ Р·Р°РЅРёРјР°С‚СЊ РІСЃС‘ РґРѕСЃС‚СѓРїРЅРѕРµ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ */
+main {
+    flex: 1; /* Р Р°СЃС‚СЏРіРёРІР°РµС‚ main, С‡С‚РѕР±С‹ Р·Р°РЅСЏС‚СЊ РІСЃС‘ РѕСЃС‚Р°РІС€РµРµСЃСЏ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ */
 }
 
-    nav ul li a {
-        text-decoration: none; /* Убираем подчеркивание */
-        color: #000000 !important; /* Черный цвет ссылок */
-        font-size: 20px;
-        font-family: "DM Serif Text", serif;
-        transition: font-size 0.3s, color 0.3s
-    }
-
-nav ul li a:hover {
-    font-size: 22px;
-    color: #A1B6BF !important; /* Золотой цвет при наведении */
+/* РЎС‚РёР»Рё РґР»СЏ С„СѓС‚РµСЂР° */
+footer {
+    border-top: 1px solid #ddd;
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 1rem 0;
+}
+.custom-footer {
+    background-color: #534E4E; /* Р¦РІРµС‚ С„РѕРЅР° С„СѓС‚РµСЂР° */
 }
 
-/*для менюшек*/
-
-.burger-icon {
-    display: none; /* Иконка бургер-меню скрыта на больших экранах */
-    cursor: pointer;
-}
-
-.mobile-menu {
-    display: none; /* Меню для мобильных устройств скрыто по умолчанию */
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    opacity: 0; /* Меню скрыто с нулевой прозрачностью */
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out; /* Плавное изменение прозрачности и сдвига */
-}
-    .mobile-menu li {
-        margin: 10px 0; /* Отступы между пунктами меню */
-    }
-@media (max-width: 768px) {
-    /* На экранах шириной до 768px скрываем стандартное меню */
-    .desktop-menu {
-        display: none;
-    }
-
-    /* Показываем иконку бургер-меню */
-    .burger-icon {
-        display: block;
-    }
-
-    /* Показываем мобильное меню, если оно открыто */
-    .mobile-menu.open {
-        display: block;
-        padding: 20px;
-        opacity: 1; /* Меню становится видимым */
-        justify-content: space-evenly;
-        animation: slideIn 0.3s ease-in-out;
-    }
-    
-}
-
-/* Плавное появление мобильного меню */
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Стили для адаптивности */
-@media (max-width: 768px) {
-    /* Скрываем основное меню */
-    nav ul {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Показываем бургер-иконку */
-    .burger-icon {
-        display: flex;
-    }
-
-    /* Когда меню открыто */
-    nav ul.open {
-        display: flex;
-    }
-}
-
-/* Стили для мобильных устройств */
-@media (max-width: 480px) {
-    nav ul li a {
-        font-size: 16px;
-        padding: 15px;
-    }
+.custom-footer-bottom {
+    background-color: #3E3A3A; /* РќРµРјРЅРѕРіРѕ С‚РµРјРЅРµРµ РґР»СЏ РЅРёР¶РЅРµР№ С‡Р°СЃС‚Рё */
 }

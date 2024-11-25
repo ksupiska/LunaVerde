@@ -4,7 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - LunaVerde</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/LunaVerde.styles.css" asp-append-version="true" />
     
@@ -15,16 +18,16 @@
 <body>
     <header>
         <div class="logo">
-            <svg width="70" height="70" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <rect width="70" height="70" fill="url(#pattern0_25_2)" />
+            <svg width="77" height="77" viewBox="0 0 77 77" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <rect width="77" height="77" fill="url(#pattern0_1_4)" />
                 <defs>
-                    <pattern id="pattern0_25_2" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0_25_2" transform="scale(0.0078125)" />
+                    <pattern id="pattern0_1_4" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0_1_4" transform="scale(0.0078125)" />
                     </pattern>
-                    <image id="image0_25_2" width="128" height="128" 
-                    xlink:href="data:image/png;base64,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" />
+                    <image id="image0_1_4" width="128" height="128" xlink:href="data:image/png;base64,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" />
                 </defs>
             </svg>
+
         </div>
         <nav>
             <!-- Стандартное меню -->
@@ -55,11 +58,46 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    <footer class="custom-footer text-white pt-4">
         <div class="container">
-            &copy; 2024 - LunaVerde - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="row">
+                <!-- О нас -->
+                <div class="col-md-4">
+                    <h5>About Us</h5>
+                    <p>
+                        Welcome to our restaurant! We offer the best dishes in town, made with love and fresh ingredients.
+                    </p>
+                </div>
+
+                <!-- Контакты -->
+                <div class="col-md-4">
+                    <h5>Contacts</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-geo-alt"></i> Toskana, st. Via della Stella</li>
+                        <li><i class="bi bi-telephone"></i> +39 (219) 209-21-21</li>
+                        <li><i class="bi bi-envelope"></i> info@luna_verde.com</li>
+                    </ul>
+                </div>
+
+                <!-- Социальные сети -->
+                <div class="col-md-4">
+                    <h5>We are on social networks</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white me-3"><i class="bi bi-facebook fs-4"></i></a></li>
+                        <li><a href="#" class="text-white me-3"><i class="bi bi-instagram fs-4"></i></a></li>
+                        <li><a href="#" class="text-white me-3"><i class="bi bi-twitter fs-4"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Нижняя часть футера -->
+        <div class="custom-footer-bottom text-center py-3 mt-4">
+            <small>&copy; 2024 Luna Verde. All rights reserved.</small>
         </div>
     </footer>
+
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>

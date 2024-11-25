@@ -4,16 +4,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пиццерия LunaVerde</title>
+    <title>Open-air Restaurant LunaVerde</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/style.css">
+    <link href="~/css/header.css" rel="stylesheet"/>
+    <link href="~/css/homePage.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
 </head>
 <body>
-    <main>
-        <section class="hero">
-            <h2>Добро пожаловать в нашу пиццерию!</h2>
-            <p>Попробуйте лучшие пиццы и закуски в нашем меню!</p>
-            <a href="/Menu" class="btn-primary">Посмотреть меню</a>
-        </section>
-    </main>
+    <div class="title">
+        <h1>Luna Verde</h1>
+    </div>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <img src="~/images/pizzeria.png" alt="Alternate Text" />
+            </div>
+            <div class="col-md-6 align-items-center">
+                <p class="text-justify mb-0">
+                    The open-air restaurant "Luna Verde" opened its doors in the summer of 2018, on the picturesque coast of the small seaside town of Santa Maria. The founders of the establishment were the spouses Luca and Maria Rossi, who had long dreamed of creating a place where people could enjoy not only exquisite dishes, but also nature - a fresh sea breeze and a view of the sunset.
+                </p>
+            </div>
+            </div>
+    </div>
+    <div class="container py-5">
+        <div class="row text-center">
+            <!-- Первый блок -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="d-flex flex-column align-items-center">
+
+                    <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="90" height="90" fill="url(#pattern0_4_30)" />
+                        <defs>
+                            <pattern id="pattern0_4_30" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_4_30" transform="scale(0.0078125)" />
+                            </pattern>
+                            <image id="image0_4_30" width="128" height="128" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAADsQAAA7EB9YPtSQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAgySURBVHic7Z1riFVVFMd/d8ZSy7RSS8dKexKio1moNVFXKAjsQZHVZJqEEAVJkdW3GkLo8SF6QCkRRQS9NIs+RNGLqHxEZR/KXj4y0spSC6txRps+rGNchzl773PP457rWj/YH+buc9Zae5//PWeftffcDel4D+jLobyXMq4yUsq+aklzstH8mACUYwJQjglAOSYA5ZgAlDMoR9tbgOcd9Z3ACTn6r8evL+a8KGtfeXG92/reT9Ocm4Zm9JtbzPYIUI4JQDkmAOWYAJRjAlCOCUA5eeYBysQk4FxgKtDuOK4dWAp8DnwIfJl/aI3lYBbADGAucAUwLvCco4Eba/7+CVgBPAd8kml0JeFgewS0AHOQi7UauIXwiz8Q44BFwFpgDXAlB1mf5dmYSsr6pMxCLvxLwFkZ2waYDryMiOH8jG0X3Vf/k1YAfzjqxnjObXPU7UoQw3DgSeAdYFqC8+rlTCT9uhQ4IsF5ZeirzFmKe71a3Ddllue8xwP9twPfe2zlWb5FBpghNLqvcmHBAAHVls3AlH7nTAF+8Jw3P8D3JcBfHjtFlN3A7IB4F3jsbCa/vool7bOlLQrQ9TbRA6xEGngicDlwiOP4XmTq82fHMXOBZzx+4/gW2ABsjwrA6KicDJxWh81e4HrcU7qN6qvcWU6236gXPP4uRxoeam8v8ApwA3BcQHuOj45dCexL4KcXuMxju+i+KoTTgT1k06Bu3N/AmdExIbb+QZ67p6Ro26nAsoQ+pzvsFdlXhXIX2TTqDoePY4AfA+2sQi5eVpyG5BVCfG9BHidxFNFXhVMBniJdg5Z5fLwaYGMvcDf5ZDgHAfcQ9lhY4bBTRF81hAqwhGTPzb7o+HtxD0g7A+zsRQaHeTMv8uWLZ47DRp591XA6kIxcSIPWAmd77A1FbqsuOz3AVRm3w8U1+Aeim4EhHjtZ91WpWIi7QQsD7dzpsdMH3JZl4IEsDohrcaCtrPqqVFRxN6oaYGMwsNVj5w0ac0usAK97YvsJODTAVtVjp5pp5DWUfWbramCso34HkoDpKyacA9j/zdzpOKYNmUEsLWUXgC/N+RDwaxGBxPAL8IjnmFSp2mamSrrb2mjco+0dyExgozkSuQvExbkXGOWxUXWcr/YRcCHQ6qhfBvxZUCwudiHT0XG0AhcUFEtiyiyAWZ761wqJIoxXPfW+tjSMMgvAtbhjO/JeXBZWI+OBOM4oKpCkhKRMJyAXYxxwWALbJ3nqO5GFm3FMdNT9Rsly4ciY5NiYuknIHEAcafuqP38jr6CfIlPQiTkEuBlZHh2SpbJS3vIZcBPudQUHcA6yaKLRgVvJtnxDQCp5HuFz31aar3QD1xHDRYTNcllp7rIPuDi65v/n0CcAX1COxIqRP38QLTjdn2h5nHz+mcIoJ0OAkcDKCrLcaT3lzgkY2fMvskbRu0ZtD7LMyjUrZ5SLscjytR7c1/ZO8P+KdamnMw0nc3Bf23cBNjkOeLvwkI2seZf467uxBfetvUz5dqM+1jjq2lqQZVdx9GQcjFE8exx1g23krxwTgHJ808EduKcxjfLT4aqsIKNBQyn2CFCOCUA5JgDlmACUYwJQjgnAcM4WdTUuLCMjunBcY7sDKMcEoBwTgHJMAMoxASjHBKAcE4ByTADKMQEoxwSgHBOAckwAyjEBKMcEoBwTgHJMAMoxASjHBKAcE4ByTADKMQEoxwSgHBOAckwAyjEBKMcEoJyyCGBMVMxvweSxy3ZSWoBnkR0tLkB+ztz8Fkij/zm0q2B/2vzW+huoNFQAVQ7cpGIfsl9g3mjy20VJBTAO2DaAz21RnfnNhq4BfAYL4CXy2Zl7GLKbVZzfz6JjtPj9FDg8B78V4GWHX68A+oAncG/hmpSjgI8D/H4UHZsVRwOrSuz3Q2Qf4qwYhGyv6/PrPaAP+dn4LF5bzkC2Lwvx2Qd8DUzNwO+0JvG7HtnLJy1tuH8m/gABPB144E5gEbLfTFKGAw9Q35Z03cD9wIg6/I4AHkR+MbuZ/N5HfRt4DQFuRTa0DvH1NMBQ4JMEAW4FlgCTcY8PWpBNKB9FdqlK2hH9y67I1kzcj6TW6JjHEnREWf0+HNl0JewqQDtyTQYaZMaVtcDQ/RewDdlY4DiHo4HYjgxuNiEXGWA0cCJyC83yWVrLTmAdsBH4PfpsJLIH78Hq93Okn3+LPjsS6edpwKiE9rYgwtpW++EEYAPplWul3GUzcDIxjEc2kCw6qBeiYn7zLeuA4/FwGJKrLiKgHuD2yG8F2RLet9VZVn4XRz6L9lvb3sUF+e1DBnxDScClyLMir4DWIIOX/rQDq3P0uxYZwPZnclSXl99VMX6n5Oz3B2r2Ck7K4Yhif84woPXILuWuEXULMBf4KocOqTr8VnPw9yVwLe6RfCswH8k/ZOV3G3LtMskwDoka8RbQW0cw3cBy5K6SZA1CC6LeF4F/6vDbKAH8jTzjZydsbyvSR8upL2fSC7yJXKugfE09ef7hSEd1ABOBU5F05wgk8dGD5Aq+R77BHyCp3911+KplGJJXOBd55RqPvL7uv5P0IqrvBmY47MwC3o+pqyI7qcaxBunYsch8PsiM3lbkVrsOSelm1d4O4Dykn0+J/A4GDkVeu38HvkPuqh8h7fozpd+mp0p+dwDXuU1JWZaEGQ3CBKAcE4ByTADKMQEoxwSgHBOAckwAyjEBKMcEoBwTgHJMAMoxASjHBKCcMvw+wECcAHTWee5JnvpO4tcLpDnXx/PIEjsjgCrZL81qdKlm2D+ZYY8A5ZgAlGMCUI4JQDkmAOWYAJTzH//uOSHRoBtvAAAAAElFTkSuQmCC" />
+                        </defs>
+                    </svg>
+
+                    <h5 class="fw-bold">Good cervice</h5>
+                    <p class="text">
+                        Our staff is always ready to help you with a smile and attention to detail.
+                        At "Luna Verde" you will feel cared for from the first moment.
+                    </p>
+                </div>
+            </div>
+            <!-- Второй блок -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="d-flex flex-column align-items-center">
+
+                    <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="90" height="90" fill="url(#pattern0_4_24)" />
+                        <defs>
+                            <pattern id="pattern0_4_24" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_4_24" transform="scale(0.0078125)" />
+                            </pattern>
+                            <image id="image0_4_24" width="128" height="128" xlink:href="data:image/png;base64,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" />
+                        </defs>
+                    </svg>
+
+                    <h5 class="fw-bold">Menu - suitable for everyone</h5>
+                    <p class="text">
+                        We offer dishes for every taste - from traditional Italian to vegetarian options.
+                        Here everyone will find something to their liking.
+                    </p>
+                </div>
+            </div>
+            <!-- Третий блок -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="d-flex flex-column align-items-center">
+
+                    <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="90" height="90" fill="url(#pattern0_4_21)" />
+                        <defs>
+                            <pattern id="pattern0_4_21" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_4_21" transform="scale(0.0078125)" />
+                            </pattern>
+                            <image id="image0_4_21" width="128" height="128" xlink:href="data:image/png;base64,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" />
+                        </defs>
+                    </svg>
+
+                    <h5 class="fw-bold">Quick cooking</h5>
+                    <p class="text">
+                        At Luna Verde we value your time and serve food in the shortest possible time without compromising on quality.
+                        Enjoy delicious food without long waits.
+                    </p>
+                </div>
+            </div>
+            <!-- Четвертый блок -->
+            <div class="col-md-6 col-lg-3 mb-4">
+                <div class="d-flex flex-column align-items-center">
+
+                    <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <rect width="90" height="90" fill="url(#pattern0_4_36)" />
+                        <defs>
+                            <pattern id="pattern0_4_36" patternContentUnits="objectBoundingBox" width="1" height="1">
+                                <use xlink:href="#image0_4_36" transform="scale(0.0078125)" />
+                            </pattern>
+                            <image id="image0_4_36" width="128" height="128" xlink:href="data:image/png;base64,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" />
+                        </defs>
+                    </svg>
+
+                    <h5 class="fw-bold">The best wines</h5>
+                    <p class="text">
+                        Our wine cellar offers carefully selected varieties of the best Italian wines.
+                        Accentuate the taste of your dishes with the perfect glass!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
