@@ -30,4 +30,30 @@
         public Order Order { get; set; }
         public Menu Menu { get; set; }
     }
+
+    public class Customer
+    {
+        public int CustomerID { get; set; }
+        public string FullName { get; set; }
+        public string Email { get; set; }
+        public string Phone { get; set; }
+        public DateTime RegistrationDate { get; set; } = DateTime.Now;
+
+        // Связь с таблицей Reservations
+        public ICollection<Reservation> Reservations { get; set; }
+    }
+    public class Reservation
+    {
+        public int ReservationID { get; set; }
+        public int CustomerID { get; set; }
+        public DateTime ReservationDate { get; set; }
+        public TimeSpan ReservationTime { get; set; }
+        public int TableNumber { get; set; }
+        public int GuestsCount { get; set; }
+        public string SpecialRequests { get; set; }
+
+        // Связь с таблицей Customers
+        public Customer Customer { get; set; }
+    }
+
 }

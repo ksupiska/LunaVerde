@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="~/css/header.css" rel="stylesheet" />
+    <link href="#" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    @if (TempData["Message"] != null)
+    {
+        <div class="alert alert-success">
+            @TempData["Message"]
+        </div>
+    }
+    <form method="post" asp-action="ReserveTable">
+        <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" name="fullName" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" class="form-control" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="reservationDate">Reservation Date</label>
+            <input type="datetime-local" class="form-control" id="reservationDate" name="reservationDate" required>
+        </div>
+        <div class="form-group">
+            <label for="tableNumber">Table Number</label>
+            <input type="number" class="form-control" id="tableNumber" name="tableNumber" required>
+        </div>
+        <div class="form-group">
+            <label for="guestsCount">Number of Guests</label>
+            <input type="number" class="form-control" id="guestsCount" name="guestsCount" required>
+        </div>
+        <div class="form-group">
+            <label for="specialRequests">Special Requests</label>
+            <textarea class="form-control" id="specialRequests" name="specialRequests"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">Reserve</button>
+    </form>
+
+    <!-- Подключение Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

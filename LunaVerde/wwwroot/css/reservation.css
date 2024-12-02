@@ -1,0 +1,21 @@
+﻿body {
+    font-family: "DM Serif Text", serif;
+}
+
+.reservation-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #A1B6BF;
+    border: none;
+}
+
+    .btn-primary:hover {
+        background-color: #8A9CA4;
+    }

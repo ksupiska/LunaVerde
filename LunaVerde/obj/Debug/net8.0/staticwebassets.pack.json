@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\css\\homePage.css"
     },
     {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\reservation.css",
+      "PackagePath": "staticwebassets\\css\\reservation.css"
+    },
+    {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
