@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "OADmEPVUzyUbuNfYVHZ22/ln0/+ZJtZjxOZ699ZUreI=",
+  "Hash": "/Mn4ou+WdbrbHKuvoxlDLkIBT3Z/XewmJXset7dt8mE=",
   "Source": "LunaVerde",
   "BasePath": "_content/LunaVerde",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\LunaVerde.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\breakfast.css",
+      "SourceId": "LunaVerde",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\",
+      "BasePath": "_content/LunaVerde",
+      "RelativePath": "css/breakfast.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\breakfast.css"
+    },
+    {
       "Identity": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\header.css",
       "SourceId": "LunaVerde",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\homePage.css"
+    },
+    {
+      "Identity": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\menu.css",
+      "SourceId": "LunaVerde",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\",
+      "BasePath": "_content/LunaVerde",
+      "RelativePath": "css/menu.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\menu.css"
     },
     {
       "Identity": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\reservation.css",

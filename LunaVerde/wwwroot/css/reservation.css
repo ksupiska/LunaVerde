@@ -1,21 +1,41 @@
 ﻿body {
-    font-family: "DM Serif Text", serif;
+    font-family: "DM Serif Text", serif !important;
+}
+h1, h4{
+    text-align: center;
+}
+h4{
+    padding: 20px;
+}
+.card {
+    z-index: 1;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
-.reservation-container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.card-header {
+    background-color: #A1B6BF !important; /* Замените на ваш цвет */
+    color: #000000;
+    font-family: "DM Serif Text", serif;
+    font-weight: bold;
+}
+
+.card-body {
+    font-family: "DM Serif Text", serif !important;
+    background-color: #f9f9f9 !important; /* Нежный фон для контраста */
 }
 
 .btn-primary {
-    background-color: #A1B6BF;
+    background-color: #000000 !important; /* Чёрная кнопка */
     border: none;
 }
 
     .btn-primary:hover {
-        background-color: #8A9CA4;
+        background-color: #ffe03c !important; /* Изменение цвета при наведении */
+        color: #000000;
     }
+
+.form-control:focus {
+    border-color: #6C8A94 !important;
+    box-shadow: 0 0 5px rgba(255, 224, 60, 0.5);
+}

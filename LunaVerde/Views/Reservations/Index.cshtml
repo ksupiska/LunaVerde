@@ -2,8 +2,13 @@
 <html lang="en">
 <head>
     <link href="~/css/header.css" rel="stylesheet" />
-    <link href="#" rel="stylesheet" />
+    <link href="~/css/reservation.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
 </head>
 <body>
     @if (TempData["Message"] != null)
@@ -12,37 +17,59 @@
             @TempData["Message"]
         </div>
     }
-    <form method="post" asp-action="ReserveTable">
-        <div class="form-group">
-            <label for="fullName">Full Name</label>
-            <input type="text" class="form-control" id="fullName" name="fullName" required>
+    <div class="container mt-5">
+        <h1>
+            Table reservation
+        </h1>
+        <h4>
+            Here you can reserve a table, they will definitely call you back and we will clarify all the details!
+        </h4>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                <div class="card shadow-lg border-0 rounded">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4 class="mb-0">Reserve a Table</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" asp-action="ReserveTable">
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="reservationDate" class="form-label">Reservation Date</label>
+                                <input type="datetime-local" class="form-control" id="reservationDate" name="reservationDate" required>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="tableNumber" class="form-label">Table Number</label>
+                                    <input type="number" class="form-control" id="tableNumber" name="tableNumber" placeholder="Table number" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="guestsCount" class="form-label">Number of Guests</label>
+                                    <input type="number" class="form-control" id="guestsCount" name="guestsCount" placeholder="Number of guests" required>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="specialRequests" class="form-label">Special Requests</label>
+                                <textarea class="form-control" id="specialRequests" name="specialRequests" rows="3" placeholder="Any special requests"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Reserve Now</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" class="form-control" id="phone" name="phone" required>
-        </div>
-        <div class="form-group">
-            <label for="reservationDate">Reservation Date</label>
-            <input type="datetime-local" class="form-control" id="reservationDate" name="reservationDate" required>
-        </div>
-        <div class="form-group">
-            <label for="tableNumber">Table Number</label>
-            <input type="number" class="form-control" id="tableNumber" name="tableNumber" required>
-        </div>
-        <div class="form-group">
-            <label for="guestsCount">Number of Guests</label>
-            <input type="number" class="form-control" id="guestsCount" name="guestsCount" required>
-        </div>
-        <div class="form-group">
-            <label for="specialRequests">Special Requests</label>
-            <textarea class="form-control" id="specialRequests" name="specialRequests"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary mt-3">Reserve</button>
-    </form>
+    </div>
+
 
     <!-- Подключение Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>

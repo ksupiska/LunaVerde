@@ -5,12 +5,20 @@
       "PackagePath": "staticwebassets\\LunaVerde.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\breakfast.css",
+      "PackagePath": "staticwebassets\\css\\breakfast.css"
+    },
+    {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\header.css",
       "PackagePath": "staticwebassets\\css\\header.css"
     },
     {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\homePage.css",
       "PackagePath": "staticwebassets\\css\\homePage.css"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\menu.css",
+      "PackagePath": "staticwebassets\\css\\menu.css"
     },
     {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\reservation.css",

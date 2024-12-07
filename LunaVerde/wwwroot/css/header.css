@@ -10,7 +10,7 @@ header {
 }
 
 /* Логотип */
-.logo {
+.logo svg{
     display: flex;
     align-items: center;
     width: 40px; /* Размер логотипа */
@@ -18,8 +18,8 @@ header {
     margin-right: 10px;
     transition: width 0.3s, height 0.3s;
 }
-.logo:hover{
-    width: 60px;
+.logo svg:hover{
+    width: 50px;
     height: auto;
     transition: width 0.3s, height 0.3s;
 }
@@ -61,6 +61,7 @@ nav ul li a:hover {
 }
 
 .mobile-menu {
+    z-index: 10;
     display: none; /* Меню для мобильных устройств скрыто по умолчанию */
     list-style-type: none;
     margin: 0;

@@ -1,0 +1,54 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    font-family: "DM Serif Text", serif;
+}
+.row .col {
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.text-justify {
+    font-size: 18px;
+}
+
+.d-flex svg {
+    width: 40px;
+    height: auto;
+    filter: invert(0); /* Делает SVG черным по умолчанию */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.row aligh-items-center {
+    justify-content: center;
+}
+
+.d-flex {
+    background-color: #A1B6BF;
+    padding: 30px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+    .d-flex:hover {
+        transform: scale(1.1); /* Увеличение размера */
+        background-color: #6C8A94; /* Темный оттенок при наведении (опционально) */
+    }
+
+    .d-flex h5,
+    .d-flex p {
+        color: black; /* Начальный цвет текста */
+        transition: color 0.3s ease; /* Плавный переход цвета */
+    }
+
+    .d-flex:hover h5,
+    .d-flex:hover p {
+        color: white; /* Цвет текста при наведении */
+    }
+
+.fw-bold {
+    color: black;
+    font-size: 22px;
+}
