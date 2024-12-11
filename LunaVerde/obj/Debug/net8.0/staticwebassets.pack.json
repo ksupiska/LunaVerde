@@ -5,8 +5,8 @@
       "PackagePath": "staticwebassets\\LunaVerde.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\breakfast.css",
-      "PackagePath": "staticwebassets\\css\\breakfast.css"
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\cards.css",
+      "PackagePath": "staticwebassets\\css\\cards.css"
     },
     {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\css\\header.css",
@@ -31,6 +31,102 @@
     {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\breakfast1.jpg",
+      "PackagePath": "staticwebassets\\images\\breakfast1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\breakfast2.jpg",
+      "PackagePath": "staticwebassets\\images\\breakfast2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\breakfast3.jpg",
+      "PackagePath": "staticwebassets\\images\\breakfast3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\breakfast4.jpg",
+      "PackagePath": "staticwebassets\\images\\breakfast4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\breakfast5.jpg",
+      "PackagePath": "staticwebassets\\images\\breakfast5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\breakfast6.jpg",
+      "PackagePath": "staticwebassets\\images\\breakfast6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\dinner1.jpg",
+      "PackagePath": "staticwebassets\\images\\dinner1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\dinner2.jpg",
+      "PackagePath": "staticwebassets\\images\\dinner2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\dinner3.jpg",
+      "PackagePath": "staticwebassets\\images\\dinner3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\dinner4.jpg",
+      "PackagePath": "staticwebassets\\images\\dinner4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\dinner5.jpg",
+      "PackagePath": "staticwebassets\\images\\dinner5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\dinner6.jpg",
+      "PackagePath": "staticwebassets\\images\\dinner6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\drink1.jpg",
+      "PackagePath": "staticwebassets\\images\\drink1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\drink2.jpg",
+      "PackagePath": "staticwebassets\\images\\drink2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\drink3.jpg",
+      "PackagePath": "staticwebassets\\images\\drink3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\drink4.jpg",
+      "PackagePath": "staticwebassets\\images\\drink4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\drink5.jpg",
+      "PackagePath": "staticwebassets\\images\\drink5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\drink6.jpg",
+      "PackagePath": "staticwebassets\\images\\drink6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\lunch1.jpg",
+      "PackagePath": "staticwebassets\\images\\lunch1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\lunch2.jpg",
+      "PackagePath": "staticwebassets\\images\\lunch2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\lunch3.jpg",
+      "PackagePath": "staticwebassets\\images\\lunch3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\lunch4.jpg",
+      "PackagePath": "staticwebassets\\images\\lunch4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\lunch5.jpg",
+      "PackagePath": "staticwebassets\\images\\lunch5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\lunch6.jpg",
+      "PackagePath": "staticwebassets\\images\\lunch6.jpg"
     },
     {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\pizzeria.png",

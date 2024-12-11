@@ -34,8 +34,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxCcmVha2Zhc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/kspiska/source/repos/LunaVerde/LunaVerde/Views/Menu/Dinner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxEaW5uZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kspiska/source/repos/LunaVerde/LunaVerde/Views/Menu/Drink.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxEcmluay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kspiska/source/repos/LunaVerde/LunaVerde/Views/Menu/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/kspiska/source/repos/LunaVerde/LunaVerde/Views/Menu/Lunch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxMdW5jaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/kspiska/source/repos/LunaVerde/LunaVerde/Views/Reservations/Index.cshtml]
