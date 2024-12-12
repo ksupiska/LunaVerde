@@ -9,7 +9,7 @@ burgerIcon.addEventListener('click', () => {
 });
 
 
-//для корзины
+//ДЛЯ КОРЗИНЫ
 document.addEventListener("DOMContentLoaded", () => {
     const cart = {};
 

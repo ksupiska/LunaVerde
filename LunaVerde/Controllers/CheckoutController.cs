@@ -98,7 +98,7 @@ namespace LunaVerde.Controllers
             }
 
             // Перезагружаем страницу корзины
-            return RedirectToAction("Cart");
+            return RedirectToAction("Index");
         }
 
 

@@ -45,11 +45,11 @@
                             <td>
                                 <form asp-action="UpdateCart" method="post">
                                     <input type="hidden" name="menuId" value="@item.MenuId" />
-                                    <input type="number" name="quantity" value="@item.Quantity" min="1" />
-                                    <button type="submit" class="btn btn-sm btn-primary">Update</button>
+                                    <input type="number" name="quantity" value="@item.Quantity" min="0" />
+                                    <a asp-action="UpdateCart"><button type="submit" class="btn btn-sm btn-primary">Update</button></a>
                                 </form>
                             </td>
-                            <td>@(item.Price * item.Quantity).ToString("C")</td>
+                            <td>@($"{(item.Price * item.Quantity):0.00} Br")</td>
                         </tr>
                     }
                 </tbody>
