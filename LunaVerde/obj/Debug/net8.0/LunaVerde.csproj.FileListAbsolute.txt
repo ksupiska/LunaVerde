@@ -167,3 +167,4 @@ C:\Users\kspiska\source\repos\LunaVerde\LunaVerde\bin\Debug\net8.0\runtimes\brow
 C:\Users\kspiska\source\repos\LunaVerde\LunaVerde\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 C:\Users\kspiska\source\repos\LunaVerde\LunaVerde\obj\Debug\net8.0\LunaVerde.csproj.AssemblyReference.cache
 C:\Users\kspiska\source\repos\LunaVerde\LunaVerde\obj\Debug\net8.0\LunaVerde.csproj.Up2Date
+C:\Users\kspiska\source\repos\LunaVerde\LunaVerde\bin\Debug\net8.0\Newtonsoft.Json.dll

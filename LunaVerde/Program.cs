@@ -7,6 +7,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<LunaVerdeDBContext>(options =>
     options.UseSqlServer("Server=DESKTOP-VKIG8QK\\SQLEXPRESS; Database=Luna Verde; Trusted_Connection=True;" +
     "TrustServerCertificate=True"));
+// Добавь сервисы для работы с сессиями
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Время жизни сессии
+    options.Cookie.HttpOnly = true; // Сессии доступны только через HTTP
+    options.Cookie.IsEssential = true; // Обязательно для работы сессий
+});
 
 
 
@@ -14,6 +22,8 @@ builder.Services.AddDbContext<LunaVerdeDBContext>(options =>
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
+
+app.UseSession();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
