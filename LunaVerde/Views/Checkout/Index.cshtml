@@ -21,7 +21,10 @@
 
     @if (Model == null || !Model.Any())
     {
-        <div class="alert alert-warning">Your cart is empty. Please add some items.</div>
+        <div class="container mt-4">
+            <div class="alert alert-warning">Your cart is empty. Please add some items.</div>
+            <a asp-controller="Menu" asp-action="Index"><button class="btn btn-dark">Return back</button></a>
+        </div>
     }
     else
     {
@@ -30,6 +33,7 @@
             <table class="table">
                 <thead>
                     <tr>
+                        <th>Photo</th>
                         <th>Dish</th>
                         <th>Price</th>
                         <th>Quantity</th>
@@ -40,6 +44,7 @@
                     @foreach (var item in Model)
                     {
                         <tr>
+                            <td><img src="@item.ImagePath" alt="Alternate Text" /></td>
                             <td>@item.Name</td>
                             <td>@item.Price.ToString("C")</td>
                             <td>

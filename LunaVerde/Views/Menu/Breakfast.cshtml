@@ -34,14 +34,12 @@
                             <h5 class="card-title">@item.Name</h5>
                             <p class="card-text">@item.Description</p>
                             <p class="card-text"><strong>Price: </strong>@item.Price.ToString("C")</p>
-                            <div class="d-flex align-items-center">
-                                <button class="btn btn-sm btn-outline-danger decrement" data-id="@item.MenuId">-</button>
-                                <span class="mx-2 quantity" data-id="@item.MenuId">0</span>
-                                <button class="btn btn-sm btn-outline-success increment" data-id="@item.MenuId">+</button>
-                            </div>
+
                             <form asp-controller="Checkout" asp-action="AddToCart" method="post">
                                 <input type="hidden" name="menuId" value="@item.MenuId" />
-                                <button type="submit" class="btn btn-dark">Add to cart</button>
+                                <div class="comtainer md-4">
+                                    <a asp-action="Breakfast"><button class="btn btn-dark">Add to cart</button></a>
+                                </div>
                             </form>
 
                         </div>
