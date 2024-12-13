@@ -34,7 +34,7 @@
             <!-- Стандартное меню -->
             <ul class="desktop-menu">
                 <li><a asp-controller="Menu" asp-action="Index">Menu</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a asp-controller="Authorization" asp-action="Index">Authorization</a></li>
                 <li><a asp-controller="Reservations" asp-action="Index">Reservation</a></li>
             </ul>
 
@@ -48,7 +48,7 @@
             <!-- Меню для мобильных устройств (по умолчанию скрыто) -->
             <ul id="mobile-menu" class="mobile-menu">
                 <li><a asp-controller="Menu" asp-action="Index">Menu</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a asp-controller="Authorization" asp-action="Index">Authorization</a></li>
                 <li><a asp-controller="Reservations" asp-action="Index">Reservation</a></li>
             </ul>
         </nav>

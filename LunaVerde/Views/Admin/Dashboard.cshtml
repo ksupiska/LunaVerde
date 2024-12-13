@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Admin Dashboard</title>
+    <link href="~/css/header.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Admin Dashboard</h1>
+
+        <h2>Customers</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Registration Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in ViewBag.Customers)
+                {
+                    <tr>
+                        <td>@customer.CustomerID</td>
+                        <td>@customer.FullName</td>
+                        <td>@customer.Email</td>
+                        <td>@customer.Phone</td>
+                        <td>@customer.RegistrationDate.ToShortDateString()</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h2>Reservations</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Customer ID</th>
+                    <th>Reservation Date</th>
+                    <th>Reservation Time</th>
+                    <th>Table Number</th>
+                    <th>Guests Count</th>
+                    <th>Special Requests</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var reservation in ViewBag.Reservations)
+                {
+                    <tr>
+                        <td>@reservation.ReservationID</td>
+                        <td>@reservation.CustomerID</td>
+                        <td>@reservation.ReservationDate.ToShortDateString()</td>
+                        <td>@reservation.ReservationTime</td>
+                        <td>@reservation.TableNumber</td>
+                        <td>@reservation.GuestsCount</td>
+                        <td>@reservation.SpecialRequests</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
