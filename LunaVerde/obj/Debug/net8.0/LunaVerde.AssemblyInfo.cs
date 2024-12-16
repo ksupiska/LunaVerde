@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LunaVerde")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4974bd9f9ef5bfc8de07239d164cac13d0c25b6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8dc286bf3a1e3e049c1ce93067bf78c1e4e64fad")]
 [assembly: System.Reflection.AssemblyProductAttribute("LunaVerde")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LunaVerde")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -26,6 +26,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\kspiska\source\repos\LunaVerde\LunaVerde
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/kspiska/source/repos/LunaVerde/LunaVerde/Views/Adding/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkaW5nXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kspiska/source/repos/LunaVerde/LunaVerde/Views/Admin/Dashboard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRtaW5cRGFzaGJvYXJkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

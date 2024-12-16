@@ -133,6 +133,10 @@
       "PackagePath": "staticwebassets\\images\\pizzeria.png"
     },
     {
+      "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\Без названия.png",
+      "PackagePath": "staticwebassets\\images\\Без названия.png"
+    },
+    {
       "Id": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

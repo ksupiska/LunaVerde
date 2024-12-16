@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "sH2Gv1UK0TiXI97KfgXT8tOvw0aVyb/wAmF2RKsp3a4=",
+  "Hash": "D5dcGT1CX8BPDchMPSJgQybTwCoVT1/cEvXmWX65l3w=",
   "Source": "LunaVerde",
   "BasePath": "_content/LunaVerde",
   "Mode": "Default",
@@ -661,6 +661,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\pizzeria.png"
+    },
+    {
+      "Identity": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\images\\Без названия.png",
+      "SourceId": "LunaVerde",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\",
+      "BasePath": "_content/LunaVerde",
+      "RelativePath": "images/Без названия.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\Без названия.png"
     },
     {
       "Identity": "C:\\Users\\kspiska\\source\\repos\\LunaVerde\\LunaVerde\\wwwroot\\js\\site.js",

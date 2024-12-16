@@ -1,0 +1,48 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Add to a Menu</title>
+    <link href="~/css/header.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container mt-5" style="font-family: " DM Serif Text", serif;">
+        <div class="card shadow-lg border-0 w-70 p-3 mx-auto">
+        <h1 class="text-center">Adding to a Menu</h1>
+        <form action="/Adding/Index" method="post" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="name" class="form-label">Enter the name of the dish</label>
+                <input class="form-control" type="text" id="name" name="name" required />
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Enter description</label>
+                <input class="form-control" type="text" id="description" name="description" required />
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Enter price</label>
+                <input class="form-control" type="number" id="price" name="price" required />
+            </div>
+            <div class="mb-3">
+                <label for="image" class="form-label">Upload an image</label>
+                <input class="form-control" type="file" id="image" name="image" accept="image/*" />
+            </div>
+            <div class="mb-3">
+                <label for="item" class="form-label">Select item for dish</label>
+                <select class="form-select" id="item" name="item" required>
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Drink">Drink</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-dark w-100">Add to menu</button>
+        </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -12,10 +12,16 @@ namespace LunaVerde.Controllers
             // Получаем данные из таблиц
             var customers = _context.Customers.ToList();
             var reservations = _context.Reservations.ToList();
+            var menu = _context.Menu.ToList();
+            var order = _context.Orders.ToList();
+            var orderItem = _context.OrderItems.ToList();
 
             // Передаём данные в представление через ViewBag или ViewModel
             ViewBag.Customers = customers;
             ViewBag.Reservations = reservations;
+            ViewBag.Menu = menu;
+            ViewBag.Orders = order;
+            ViewBag.OrderItem = orderItem;
             return View();
         }
         private readonly LunaVerdeDBContext _context;

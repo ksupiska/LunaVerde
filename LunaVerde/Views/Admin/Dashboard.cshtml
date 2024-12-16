@@ -11,7 +11,7 @@
 
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container mt-5" style="font-family: " DM Serif Text", serif;">
         <h1 class="text-center">Admin Dashboard</h1>
 
         <h2>Customers</h2>
@@ -67,6 +67,82 @@
                 }
             </tbody>
         </table>
+
+        <h2> Orders </h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>CustomerName</th>
+                    <th>PhoneNumber</th>
+                    <th>OrderDate</th>
+                    <th>TotalPrice</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var order in ViewBag.Orders)
+                {
+                    <tr>
+                        <td>@order.OrderId</td>
+                        <td>@order.CustomerName</td>
+                        <td>@order.PhoneNumber</td>
+                        <td>@order.OrderDate.ToString("dd.MM.yyyy")</td>
+                        <td>@order.TotalPrice</td> <!-- Вывод в виде валюты -->
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h2> Order Items </h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>ItemId</th>
+                    <th>OrderId</th>
+                    <th>MenuId</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var orderItem in ViewBag.OrderItem)
+                {
+                    <tr>
+                        <td>@orderItem.OrderItemId</td>
+                        <td>@orderItem.OrderId</td>
+                        <td>@orderItem.MenuId</td>
+                        <td>@orderItem.Quantity</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <h2> Menu </h2>
+        <table class="table-striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>ImagePath</th>
+                    <th>MenuItem</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var menu in ViewBag.Menu)
+                {
+                    <tr>
+                        <td>@menu.MenuId</td>
+                        <td>@menu.Name</td>
+                        <td>@menu.Description</td>
+                        <td>@menu.Price</td>
+                        <td>@menu.ImagePath</td>
+                        <td>@menu.MenuItem</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a asp-controller="Adding" asp-action="Index"><button type="button" class="btn btn-dark w-100">Add to table</button></a>
     </div>
 </body>
 </html>
