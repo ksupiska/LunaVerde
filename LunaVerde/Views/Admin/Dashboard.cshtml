@@ -117,7 +117,7 @@
         </table>
 
         <h2> Menu </h2>
-        <table class="table-striped">
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -126,6 +126,7 @@
                     <th>Price</th>
                     <th>ImagePath</th>
                     <th>MenuItem</th>
+                    <th>Actions</th> <!-- Колонка для действий -->
                 </tr>
             </thead>
             <tbody>
@@ -138,11 +139,19 @@
                         <td>@menu.Price</td>
                         <td>@menu.ImagePath</td>
                         <td>@menu.MenuItem</td>
+                        <td>
+                            <!-- Кнопка для удаления -->
+                            <form asp-controller="Adding" asp-action="Delete" method="post">
+                                <input type="hidden" name="id" value="@menu.MenuId" />
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </td>
                     </tr>
                 }
             </tbody>
         </table>
         <a asp-controller="Adding" asp-action="Index"><button type="button" class="btn btn-dark w-100">Add to table</button></a>
+
     </div>
 </body>
 </html>

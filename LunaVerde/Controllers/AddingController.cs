@@ -55,6 +55,31 @@ namespace LunaVerde.Controllers
 
             return RedirectToAction("Index");
         }
-        
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+            // Поиск элемента по ID
+            var menu = _context.Menu.FirstOrDefault(m => m.MenuId == id);
+
+            if (menu != null)
+            {
+                // Удаление изображения, если оно существует
+                if (!string.IsNullOrEmpty(menu.ImagePath))
+                {
+                    var imagePath = Path.Combine("wwwroot", menu.ImagePath.TrimStart('/'));
+                    if (System.IO.File.Exists(imagePath))
+                    {
+                        System.IO.File.Delete(imagePath);
+                    }
+                }
+
+                // Удаление записи из базы данных
+                _context.Menu.Remove(menu);
+                _context.SaveChanges();
+            }
+
+            return RedirectToAction("Index");
+        }
+
     }
 }
