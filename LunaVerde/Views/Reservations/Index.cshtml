@@ -17,6 +17,16 @@
             @TempData["Message"]
         </div>
     }
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <p>@error.ErrorMessage</p>
+            }
+        </div>
+    }
+
     <div class="container mt-5">
         <h1>
             Table reservation
@@ -45,8 +55,11 @@
                                 <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required>
                             </div>
                             <div class="mb-3">
-                                <label for="reservationDate" class="form-label">Reservation Date</label>
-                                <input type="datetime-local" class="form-control" id="reservationDate" name="reservationDate" required>
+                                <label for="reservationDateTime" class="form-label">Reservation Date</label>
+                                <input type="datetime-local" class="form-control" id="reservationDate" name="reservationDate"
+                                       min="@DateTime.Now.ToString("yyyy-MM-ddTHH:mm")"
+                                       required>
+                                <small class="text-muted">Available time: 9:00 AM - 11:00 PM</small>
                             </div>
                             <div class="row">
                                 <div class="col-md-6 mb-3">
