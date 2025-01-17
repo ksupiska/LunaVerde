@@ -23,7 +23,6 @@ namespace LunaVerde.Controllers
             return View(cart);
         }
 
-        // Метод для добавления блюда в корзину
         [HttpPost]
         public IActionResult AddToCart(int menuId)
         {
@@ -55,17 +54,19 @@ namespace LunaVerde.Controllers
                 }
                 else
                 {
-                    // Логирование ошибки
-                    Console.WriteLine($"Menu item with ID {menuId} not found.");
+                    TempData["Error"] = $"Блюдо с ID {menuId} не найдено.";
+                    return RedirectToAction("Index", "Menu"); // Перенаправляем на главную страницу меню
                 }
             }
 
             // Сохраняем обновлённую корзину в сессию
             HttpContext.Session.SetObjectAsJson("Cart", cart);
 
-            // Перенаправляем пользователя обратно
+
+            // Перенаправляем на ту же страницу или страницу меню
             return RedirectToAction("Breakfast", "Menu");
         }
+
 
 
         // Метод для изменения количества блюда
@@ -139,10 +140,14 @@ namespace LunaVerde.Controllers
 
                 // Очищаем корзину
                 HttpContext.Session.Remove("Cart");
+
+                // Добавляем сообщение об успешном заказе в TempData
+                TempData["SuccessMessage"] = "Your order has been successfully placed!";
             }
 
             return RedirectToAction("OrderSuccess");
         }
+
 
         // Страница оформления заказа (запись в бд должна происходить)
         public IActionResult OrderSuccess()
@@ -155,7 +160,6 @@ namespace LunaVerde.Controllers
             return View();
         }
 
-        //добавление в бд
         [HttpPost]
         public IActionResult PlaceOrder(OrderViewModel model)
         {
@@ -165,7 +169,8 @@ namespace LunaVerde.Controllers
                 var cart = HttpContext.Session.GetObjectFromJson<List<CartItem>>("Cart");
                 if (cart == null || !cart.Any())
                 {
-                    return RedirectToAction("Cart");
+                    TempData["ErrorMessage"] = "Your cart is empty!";
+                    return RedirectToAction("Index");
                 }
 
                 // Создаем новый заказ
@@ -174,42 +179,38 @@ namespace LunaVerde.Controllers
                     CustomerName = model.CustomerName,
                     PhoneNumber = model.PhoneNumber,
                     OrderDate = DateTime.Now,
-                    TotalPrice = cart.Sum(c => c.Price * c.Quantity) // Общая сумма заказа
+                    TotalPrice = cart.Sum(c => c.Price * c.Quantity)
                 };
 
-                // Сохраняем заказ в базу данных
+                // Сохраняем заказ и элементы заказа в базу данных
                 _context.Orders.Add(order);
-                _context.SaveChanges(); // После сохранения OrderId будет сгенерирован автоматически
+                _context.SaveChanges();
 
-                // Сохраняем позиции заказа в таблице OrderItems
                 foreach (var item in cart)
                 {
                     var orderItem = new OrderItem
                     {
-                        OrderId = order.OrderId, // Связываем с созданным заказом
+                        OrderId = order.OrderId,
                         MenuId = item.MenuId,
                         Quantity = item.Quantity
                     };
-
                     _context.OrderItems.Add(orderItem);
                 }
-
-                _context.SaveChanges(); // Сохраняем все OrderItems в базу данных
-
-                // Логируем сохраненный заказ
-                Console.WriteLine($"OrderId: {order.OrderId}, CustomerName: {order.CustomerName}");
+                _context.SaveChanges();
 
                 // Очищаем корзину
                 HttpContext.Session.Remove("Cart");
 
-                // Перенаправляем на страницу успешного заказа
+                // Устанавливаем сообщение об успешном заказе
+                TempData["SuccessMessage"] = "Your order has been successfully placed!";
                 return RedirectToAction("OrderSuccess");
             }
 
-            // Если данные неверные, возвращаем форму
-            return View("Checkout", model);
+            // Если модель недействительна, возвращаем форму с ошибками
+            return View("OrderSuccess", model);
         }
 
 
     }
+
 }

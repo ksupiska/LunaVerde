@@ -3,46 +3,35 @@ using LunaVerde.Models;
 using Microsoft.EntityFrameworkCore;
 using LunaVerde.Data;
 using System;
+using System.Globalization;
+using Microsoft.Extensions.Logging;
 
 namespace LunaVerde.Controllers
 {
     public class ReservationsController : Controller
     {
+        private readonly ILogger<ReservationsController> _logger;
         public IActionResult Index()
         {
             return View();
         }
 
         private readonly LunaVerdeDBContext _context;
-        public ReservationsController(LunaVerdeDBContext context)
+        public ReservationsController(LunaVerdeDBContext context, ILogger<ReservationsController> logger)
         {
             _context = context;
+            _logger = logger;
         }
 
         [HttpPost]
-        public IActionResult ReserveTable(string fullName, string email, string phone, DateTime reservationDateTime, int tableNumber, int guestsCount, string? specialRequests)
+        public IActionResult ReserveTable(string fullName, string email, string phone, string reservationDateTime, int tableNumber, int guestsCount, string? specialRequests)
         {
-            // Проверка: дата резервирования должна быть в будущем
-            if (reservationDateTime <= DateTime.Now ||
-                (reservationDateTime.Date == DateTime.Now.Date && reservationDateTime.TimeOfDay <= DateTime.Now.TimeOfDay))
+            // Парсим строку даты и времени
+            if (!DateTime.TryParse(reservationDateTime, CultureInfo.InvariantCulture, DateTimeStyles.None, out var parsedDateTime))
             {
-                ModelState.AddModelError("", "Reservation date and time must be in the future.");
-                return View("Index"); // Возврат на форму, если дата некорректна
+                TempData["ErrorMessage"] = "Invalid date and time format. Please try again.";
+                return RedirectToAction("Index");
             }
-
-            // Извлекаем время из даты резервирования
-            TimeSpan reservationTime = reservationDateTime.TimeOfDay;
-
-            // Проверка времени бронирования: между 9:00 и 23:00
-            TimeSpan openingTime = new TimeSpan(9, 0, 0); // 9:00 AM
-            TimeSpan closingTime = new TimeSpan(23, 0, 0); // 11:00 PM
-
-            if (reservationTime < openingTime || reservationTime > closingTime)
-            {
-                ModelState.AddModelError("", "You can reserve a table only between 9:00 AM and 11:00 PM.");
-                return View("Index");
-            }
-
             // Проверяем, есть ли уже клиент с таким Email
             var customer = _context.Customers.FirstOrDefault(c => c.Email == email);
 
@@ -69,8 +58,8 @@ namespace LunaVerde.Controllers
             var reservation = new Reservation
             {
                 CustomerID = customer.CustomerID,
-                ReservationDate = reservationDateTime.Date,          // Сохраняем дату
-                ReservationTime = reservationDateTime.TimeOfDay,     // Сохраняем время
+                ReservationDate = parsedDateTime.Date,          // Сохраняем дату
+                ReservationTime = parsedDateTime.TimeOfDay,      // Сохраняем время
                 TableNumber = tableNumber,
                 GuestsCount = guestsCount,
                 SpecialRequests = specialRequests
@@ -82,8 +71,6 @@ namespace LunaVerde.Controllers
             // Показываем сообщение пользователю
             TempData["Message"] = "Your table has been reserved!";
             return RedirectToAction("Index");
-        }
-
-
+        }   
     }
 }

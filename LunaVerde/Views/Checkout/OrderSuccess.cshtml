@@ -1,27 +1,36 @@
-﻿
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8" />
-
-    <title>Breakfast</title>
+    <title>Checkout</title>
 
     <link href="~/css/header.css" rel="stylesheet" />
     <link href="~/css/cards.css" rel="stylesheet" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
     @model LunaVerde.Models.OrderViewModel
+    @{
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
 
-    <div class="container mt-4">
-        <h2>Checkout</h2>
+
+    <div class="container mt-5">
+        <h1>Checkout</h1>
+
+        <!-- Отображение сообщения об успешном заказе -->
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success" role="alert">
+                @TempData["SuccessMessage"]
+            </div>
+        }
+
+        <!-- Форма для оформления заказа -->
         <form asp-action="PlaceOrder" method="post">
             <div class="mb-3">
                 <label for="CustomerName" class="form-label">Your Name</label>
@@ -31,8 +40,11 @@
                 <label for="PhoneNumber" class="form-label">Phone Number</label>
                 <input type="tel" id="PhoneNumber" name="PhoneNumber" class="form-control" required />
             </div>
-            <a asp-controller="Checkout" asp-action="Order"><button type="submit" class="btn btn-success">Place Order</button></a>
+            <button type="submit" class="btn btn-success">Place Order</button>
         </form>
+
+        <!-- Кнопка возврата в меню -->
+        <a href="@Url.Action("Index", "Menu")" class="btn btn-primary mt-3">Back to Menu</a>
     </div>
 </body>
 </html>
